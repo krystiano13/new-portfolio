@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import type { ExperienceSectionProps as Props } from "./types/ExperienceSectionProps.ts";
 
 export function ExperienceSection({ section, entryKey }: Props)
@@ -9,26 +11,57 @@ export function ExperienceSection({ section, entryKey }: Props)
             </h3>
             <section className={`mb-6 entry-${entryKey + 1}`}>
                 {
-                    section.elements.map(item => (
-                        <div className="border-1 border-gray-200 p-4 rounded-lg mb-3">
-                            <div className="flex flex-col-reverse lg:flex-row justify-between ">
-                                <div className="flex items-center">
-                                    <img
-                                        className="rounded-full border-1 border-gray-200 w-16 h-16"
-                                        src={item.logoSrc ?? ""}
-                                        alt={item.logoAlt ?? ""}
-                                    />
-                                    <div className="ml-4">
-                                        <h4 className="font-semibold text-md lg:text-lg">{ item.title }</h4>
-                                        <h5 className="text-xs lg:text-base">{ item.subtitle }</h5>
-                                    </div>
-                                </div>
-                                <div className="text-sm mb-3 lg:mb-0 lg:text-base text-gray-500">{ item.date }</div>
-                            </div>
-                        </div>
+                    section.elements.map((item, index) => (
+                        <Element item={item} />
                     ))
                 }
             </section>
         </>
+    )
+}
+
+const Element = ({ item }) => {
+    const [open, setOpen] = useState<boolean>(false);
+
+    return (
+        <div className="border-1 border-gray-200 p-4 rounded-lg mb-3">
+            <div className="flex flex-col-reverse lg:flex-row justify-between ">
+                <div className="flex items-center">
+                    <img
+                        className="rounded-full border-1 border-gray-200 w-16 h-16"
+                        src={item.logoSrc ?? ""}
+                        alt={item.logoAlt ?? ""}
+                    />
+                    <div className="ml-4">
+                        <h4 className="font-semibold text-md lg:text-lg">{ item.title }</h4>
+                        <h5 className="text-xs lg:text-base">{ item.subtitle }</h5>
+                    </div>
+                </div>
+                <div className="text-sm mb-3 lg:mb-0 lg:text-base text-gray-500">{ item.date }</div>
+            </div>
+            {
+                item.description &&
+                <div className="overflow-hidden">
+                    <div className="cursor-pointer select-none w-36" onClick={() => setOpen(prev => !prev)}>
+                        <button
+                            style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)" }}
+                            className="mt-2 transition cursor-pointer bg-gray-700 w-8 h-8 rounded-full text-white text-lg"
+                        >
+                            >
+                        </button>
+                        <span className="ml-2 w-full">
+                        {open ? "Hide" : "Show More"}
+                    </span>
+                    </div>
+
+                    <p
+                        style={{ transition: "opacity 50ms" }}
+                        className={`mt-2 text-justify ${open ? 'opacity-100 h-auto' : 'opacity-0 h-0'}`}
+                    >
+                        { item.description }
+                    </p>
+                </div>
+            }
+        </div>
     )
 }

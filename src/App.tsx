@@ -3,11 +3,11 @@ import { useEffect } from "react";
 // components
 import { AboutMe } from "./components/about-me/AboutMe.tsx";
 import { ExperienceSection } from "./components/experience-section/ExperienceSection.tsx";
+import { SkillsSection } from "./components/skills-section/SkillsSection.tsx";
 
 // data
 import { workSection } from "./components/experience-section/work-section.ts";
 import { educationSection } from "./components/experience-section/education-section.ts";
-import {SkillsSection} from "./components/skills-section/SkillsSection.tsx";
 
 function App() {
     useEffect(() => {
@@ -17,7 +17,7 @@ function App() {
     }, []);
     return (
         <>
-            <div className="fixed w-full h-full flex items-end justify-center">
+            <div className="fixed w-full h-full flex items-end justify-center pointer-events-none">
                 <div
                     className="bg-gradient-to-t entry-blur from-white h-48 to-transparent w-full"
                 ></div>

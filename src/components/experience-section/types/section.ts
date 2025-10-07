@@ -10,4 +10,5 @@ type Element = {
     logoSrc?: string;
     logoAlt?: string;
     description?: string;
+    open?: boolean;
 }
