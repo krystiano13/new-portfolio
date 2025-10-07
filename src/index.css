@@ -2,10 +2,85 @@
 
 html {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 #root {
   @apply
-  w-[100vw] min-h-[100vh] px-6 sm:px-24 md:px-48 lg:px-64 xl:px-[25%] 2xl:px-[36rem]
+  w-[100vw] min-h-[100vh] px-6 lg:px-42 2xl:px-[28%]
   pt-12;
+}
+
+#blur {
+  pointer-events: none;
+  transform-origin: bottom;
+  /*animation: blur_intro 1s linear forwards;*/
+}
+
+.entry-0 {
+  animation: entry .5s ease-in-out backwards;
+}
+
+.entry-1 {
+  animation: entry .5s ease-in-out backwards;
+  animation-delay: .15s;
+}
+
+.entry-2 {
+  animation: entry .5s ease-in-out backwards;
+  animation-delay: .3s;
+}
+
+.entry-3 {
+  animation: entry .5s ease-in-out backwards;
+  animation-delay: .45s;
+}
+
+.entry-4 {
+  animation: entry .5s ease-in-out backwards;
+  animation-delay: .6s;
+}
+
+.entry-skills-section {
+  animation: entry-2 .5s ease-in-out backwards;
+  animation-delay: 0.75s;
+}
+
+.entry-blur {
+  animation: blur_intro .5s ease-in-out forwards;
+  animation-delay: 1.25s;
+}
+
+@keyframes blur_intro {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entry {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entry-2 {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

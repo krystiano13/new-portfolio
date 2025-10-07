@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 // components
 import { AboutMe } from "./components/about-me/AboutMe.tsx";
 import { ExperienceSection } from "./components/experience-section/ExperienceSection.tsx";
@@ -7,19 +9,52 @@ import { workSection } from "./components/experience-section/work-section.ts";
 import { educationSection } from "./components/experience-section/education-section.ts";
 
 function App() {
+    useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 250)
+    }, []);
     return (
-        <div className="wrapper">
-            <h1 className="text-4xl font-bold mb-6">Hi ! I'm Krystian 🖐️️</h1>
-            <h2 className="text-2xl font-semibold mb-6">A Software Engineer</h2>
+        <>
+            <div className="fixed w-full h-full flex items-end justify-center">
+                <div
+                    className="bg-gradient-to-t entry-blur from-white h-48 to-transparent w-full"
+                ></div>
+            </div>
+            <div className="wrapper">
+                <h1 className="text-4xl font-bold mb-6 entry-0">Hi ! I'm Krystian 🖐️️</h1>
+                <h2 className="text-2xl font-semibold mb-6 entry-0">A Software Engineer</h2>
 
-            <AboutMe />
+                <AboutMe />
 
-            {
-                [workSection, educationSection].map(item => (
-                    <ExperienceSection section={item} />
-                ))
-            }
-        </div>
+                <section className="entry-2">
+                    {
+                        [workSection, educationSection].map((item, index) => (
+                            <ExperienceSection entryKey={index + 2} section={item} />
+                        ))
+                    }
+                </section>
+
+                <section className="entry-skills-section">
+                    <h3 className={`text-xl font-medium mb-3`}>
+                        SKILLS
+                    </h3>
+                    <div className="flex flex-wrap gap-4">
+                        <div className="p-3 border-1 border-gray-200 rounded-lg w-16 flex flex-col items-center gap-2 justify-center">
+                            <i className="w-full text-center devicon-html5-plain text-3xl"></i>
+                            <h4>HTML</h4>
+                        </div>
+
+                        <div className="p-3 border-1 border-gray-200 rounded-lg w-16 flex flex-col items-center gap-2 justify-center">
+                            <i className="w-full text-center devicon-css3-plain text-3xl"></i>
+                            <h4>CSS</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="h-48" id="empty"></section>
+            </div>
+        </>
     )
 }
 

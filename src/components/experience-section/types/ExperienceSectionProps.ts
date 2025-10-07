@@ -1,5 +1,6 @@
 import type { Section } from "./section.ts";
 
 export interface ExperienceSectionProps {
-    section: Section
+    section: Section,
+    entryKey: number
 }
