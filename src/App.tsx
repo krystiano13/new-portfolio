@@ -7,6 +7,7 @@ import { ExperienceSection } from "./components/experience-section/ExperienceSec
 // data
 import { workSection } from "./components/experience-section/work-section.ts";
 import { educationSection } from "./components/experience-section/education-section.ts";
+import {SkillsSection} from "./components/skills-section/SkillsSection.tsx";
 
 function App() {
     useEffect(() => {
@@ -36,20 +37,7 @@ function App() {
                 </section>
 
                 <section className="entry-skills-section">
-                    <h3 className={`text-xl font-medium mb-3`}>
-                        SKILLS
-                    </h3>
-                    <div className="flex flex-wrap gap-4">
-                        <div className="p-3 border-1 border-gray-200 rounded-lg w-16 flex flex-col items-center gap-2 justify-center">
-                            <i className="w-full text-center devicon-html5-plain text-3xl"></i>
-                            <h4>HTML</h4>
-                        </div>
-
-                        <div className="p-3 border-1 border-gray-200 rounded-lg w-16 flex flex-col items-center gap-2 justify-center">
-                            <i className="w-full text-center devicon-css3-plain text-3xl"></i>
-                            <h4>CSS</h4>
-                        </div>
-                    </div>
+                    <SkillsSection />
                 </section>
 
                 <section className="h-48" id="empty"></section>
