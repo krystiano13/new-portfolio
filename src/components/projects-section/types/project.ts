@@ -1,7 +1,5 @@
-import type { CSSProperties } from "react";
-
 export type Project = {
-    imageSrc: CSSProperties;
+    imageSrc: any;
     imageAlt: string;
     title: string;
     description: string;

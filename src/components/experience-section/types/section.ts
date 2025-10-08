@@ -3,7 +3,7 @@ export type Section = {
     elements: Element[];
 }
 
-type Element = {
+export type Element = {
     title: string;
     subtitle: string;
     date: string;

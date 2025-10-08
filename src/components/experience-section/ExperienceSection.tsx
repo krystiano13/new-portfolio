@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import type { ExperienceSectionProps as Props } from "./types/ExperienceSectionProps.ts";
+import type { Element as SectionElement } from "./types/section.ts";
 
 export function ExperienceSection({ section, entryKey }: Props)
 {
@@ -11,7 +12,7 @@ export function ExperienceSection({ section, entryKey }: Props)
             </h3>
             <section className={`mb-6 entry-${entryKey + 1}`}>
                 {
-                    section.elements.map((item, index) => (
+                    section.elements.map((item) => (
                         <Element item={item} />
                     ))
                 }
@@ -20,7 +21,7 @@ export function ExperienceSection({ section, entryKey }: Props)
     )
 }
 
-const Element = ({ item }) => {
+const Element = ({ item }: { item: SectionElement }) => {
     const [open, setOpen] = useState<boolean>(false);
 
     return (
