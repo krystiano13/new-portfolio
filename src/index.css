@@ -46,6 +46,11 @@ html {
   animation-delay: 0.75s;
 }
 
+.entry-6 {
+  animation: entry-2 .5s ease-in-out backwards;
+  animation-delay: 0.9s;
+}
+
 .entry-blur {
   animation: blur_intro .5s ease-in-out forwards;
   animation-delay: 1.25s;

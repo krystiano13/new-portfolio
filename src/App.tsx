@@ -4,10 +4,12 @@ import { useEffect } from "react";
 import { AboutMe } from "./components/about-me/AboutMe.tsx";
 import { ExperienceSection } from "./components/experience-section/ExperienceSection.tsx";
 import { SkillsSection } from "./components/skills-section/SkillsSection.tsx";
+import { ProjectsSection } from "./components/projects-section/ProjectsSection.tsx";
 
 // data
 import { workSection } from "./components/experience-section/work-section.ts";
 import { educationSection } from "./components/experience-section/education-section.ts";
+import { projects } from "./components/projects-section/projects.ts";
 
 function App() {
     useEffect(() => {
@@ -36,8 +38,12 @@ function App() {
                     }
                 </section>
 
-                <section className="entry-skills-section">
+                <section className="entry-skills-section mb-6">
                     <SkillsSection />
+                </section>
+
+                <section className="entry-6">
+                    <ProjectsSection projects={projects} />
                 </section>
 
                 <section className="h-48" id="empty"></section>

@@ -42,7 +42,7 @@ const Element = ({ item }) => {
             {
                 item.description &&
                 <div className="overflow-hidden">
-                    <div className="cursor-pointer select-none w-36" onClick={() => setOpen(prev => !prev)}>
+                    <div className="cursor-pointer select-none w-36 mt-2" onClick={() => setOpen(prev => !prev)}>
                         <button
                             style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)" }}
                             className="mt-2 transition cursor-pointer bg-gray-700 w-8 h-8 rounded-full text-white text-lg"
