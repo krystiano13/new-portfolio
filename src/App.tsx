@@ -17,13 +17,32 @@ import { LuSun } from "react-icons/lu";
 import { LuMoon } from "react-icons/lu";
 
 function App() {
+    const [darkMode, setDarkMode] = useState(false);
+    const [firstRender, setFirstRender] = useState(true);
+
     useEffect(() => {
         setTimeout(() => {
             window.scrollTo(0, 0);
         }, 250)
+
+        const darkModeStorage = localStorage.getItem("darkMode");
+
+        console.log(darkModeStorage)
+
+        if (darkModeStorage === "true") {
+            setDarkMode(true);
+        } else {
+            setDarkMode(false);
+        }
     }, []);
 
-    const [darkMode, setDarkMode] = useState(false);
+    useEffect(() => {
+        if(!firstRender) {
+            localStorage.setItem("darkMode", darkMode.toString());
+        } else {
+            setFirstRender(false);
+        }
+    }, [darkMode]);
 
     return (
         <div id="base" className={`${ darkMode ? "dark" : "" } w-full h-full dark:bg-zinc-900`}>
