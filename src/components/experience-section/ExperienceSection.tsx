@@ -47,7 +47,7 @@ const Element = ({ item }) => {
                             style={{ transform: open ? "rotate(90deg)" : "rotate(0deg)" }}
                             className="mt-2 dark:bg-gray-200 dark:text-black transition cursor-pointer bg-gray-700 w-8 h-8 rounded-full text-white text-lg"
                         >
-                            >
+                            {">"}
                         </button>
                         <span className="ml-2 dark:text-gray-200 w-full">
                         {open ? "Hide" : "Show More"}
