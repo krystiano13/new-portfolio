@@ -5,6 +5,7 @@ import { AboutMe } from "./components/about-me/AboutMe.tsx";
 import { ExperienceSection } from "./components/experience-section/ExperienceSection.tsx";
 import { SkillsSection } from "./components/skills-section/SkillsSection.tsx";
 import { ProjectsSection } from "./components/projects-section/ProjectsSection.tsx";
+import { ContactSection } from "./components/contact-section/ContactSection.tsx";
 
 // data
 import { workSection } from "./components/experience-section/work-section.ts";
@@ -42,8 +43,12 @@ function App() {
                     <SkillsSection />
                 </section>
 
-                <section className="entry-6">
+                <section className="entry-6 mb-6">
                     <ProjectsSection projects={projects} />
+                </section>
+
+                <section className="entry-7">
+                    <ContactSection />
                 </section>
 
                 <section className="h-48" id="empty"></section>
