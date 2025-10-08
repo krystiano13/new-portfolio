@@ -58,7 +58,7 @@ html {
 }
 
 .entry-blur {
-  animation: blur_intro .5s ease-in-out forwards;
+  animation: blur_intro .5s ease-in-out backwards;
   animation-delay: 1.25s;
 }
 

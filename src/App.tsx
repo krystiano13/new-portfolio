@@ -27,9 +27,9 @@ function App() {
 
     return (
         <div id="base" className={`${ darkMode ? "dark" : "" } w-full h-full dark:bg-zinc-900`}>
-            <div className="fixed w-full h-full flex items-end justify-center pointer-events-none">
+            <div className="fixed entry-blur w-full h-full flex items-end justify-center pointer-events-none">
                 <div
-                    className="bg-gradient-to-t entry-blur dark:from-zinc-900 from-white h-48 to-transparent w-full"
+                    className="bg-gradient-to-t dark:from-zinc-900 from-white h-48 to-transparent w-full"
                 ></div>
             </div>
             <div className="wrapper">
