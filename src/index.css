@@ -1,11 +1,12 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
-#root {
+#base {
   @apply
   w-[100vw] min-h-[100vh] px-6 lg:px-42 2xl:px-[28%]
   pt-12;

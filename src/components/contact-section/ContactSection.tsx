@@ -4,10 +4,10 @@ export function ContactSection()
 {
     return (
         <Fragment>
-            <h3 className="text-xl font-medium mb-3">
+            <h3 className="text-xl dark:text-white font-medium mb-3">
                 CONTACT INFO
             </h3>
-            <p>
+            <p className="dark:text-gray-200">
                 You can contact me either via {" "}
                 <a
                     className="text-blue-500"
