@@ -24,7 +24,7 @@ const Element = ({ item }) => {
     const [open, setOpen] = useState<boolean>(false);
 
     return (
-        <div className="border-1 dark:border-zinc-800 border-gray-200 p-4 rounded-lg mb-3">
+        <div className="border-1 dark:shadow-zinc-800 transition-shadow hover:shadow-md dark:border-zinc-800 border-gray-200 p-4 rounded-lg mb-3">
             <div className="flex flex-col-reverse lg:flex-row justify-between ">
                 <div className="flex items-center">
                     <img

@@ -15,7 +15,7 @@ export function ProjectsSection({ projects }: Props)
             <div className="w-full flex flex-col md:flex-row flex-wrap gap-4 justify-between">
                 {
                     projects.map(item => (
-                        <div className="flex-1 w-full lg:w-auto border-1 dark:border-zinc-700 border-gray-200 rounded-lg flex flex-col">
+                        <div className="flex-1 dark:shadow-zinc-800 cursor-pointer transition-shadow hover:shadow-md w-full lg:w-auto border-1 dark:border-zinc-700 border-gray-200 rounded-lg flex flex-col">
                             <img
                                 className="object-fill w-full rounded-t-lg"
                                 src={item.imageSrc as string}
