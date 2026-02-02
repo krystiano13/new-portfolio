@@ -10,15 +10,15 @@ export const workSection: Section = {
     {
       title: "Software Developer",
       subtitle: "Innovation Software",
-      date: "Oct 2025 - Now",
+      date: "Oct 2025 - Jan 2026",
       logoSrc: innovationLogo as string,
       logoAlt: "Innovation Software logo",
-      description: "",
+      description: "Worked on the development of an ERP system using Symfony and Vue.js. Responsible for designing and implementing core application modules, including authentication and authorization, user roles and permissions, task management, and notification systems.Collaborated closely with the team to ensure secure access control, scalable architecture, and a smooth user experience.",
     },
     {
       title: "Fullstack Developer",
       subtitle: "Oktal Labs",
-      date: "Feb 2025 - Now",
+      date: "Feb 2025 - Oct 2025",
       logoSrc: oktalLogo as string,
       logoAlt: "Oktal Labs logo",
       description:
@@ -37,8 +37,7 @@ export const workSection: Section = {
       logoSrc: logo as string,
       logoAlt: "Timenotes.io logo",
       description:
-        "Creating new Timenotes' landing page with Next.js, TailwindCSS and Sanity.io " +
-        "Working on Timenotes' React app - time tracking software for teams",
+        "Worked on the development of a time tracking application and a new landing page for TimeNotes. Responsible for building and maintaining user interfaces using React, collaborating on application features related to time tracking, and ensuring a responsive and user-friendly experience across the product."
     },
   ],
 };
