@@ -27,8 +27,6 @@ function App() {
 
         const darkModeStorage = localStorage.getItem("darkMode");
 
-        console.log(darkModeStorage)
-
         if (darkModeStorage === "true") {
             setDarkMode(true);
         } else {
