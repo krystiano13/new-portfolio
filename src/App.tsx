@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 // components
+import { HeaderSection } from "./components/header-section/HeaderSection.tsx";
 import { AboutMe } from "./components/about-me/AboutMe.tsx";
 import { ExperienceSection } from "./components/experience-section/ExperienceSection.tsx";
 import { SkillsSection } from "./components/skills-section/SkillsSection.tsx";
@@ -11,10 +12,6 @@ import { ContactSection } from "./components/contact-section/ContactSection.tsx"
 import { workSection } from "./components/experience-section/work-section.ts";
 import { educationSection } from "./components/experience-section/education-section.ts";
 import { projects } from "./components/projects-section/projects.ts";
-
-// icons
-import { LuSun } from "react-icons/lu";
-import { LuMoon } from "react-icons/lu";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -51,18 +48,10 @@ function App() {
         <div className="bg-linear-to-t dark:from-zinc-900 from-white h-48 to-transparent w-full"></div>
       </div>
       <div className="wrapper">
-        <button
-          className="entry-1 w-12 h-12 mb-6 cursor-pointer dark:bg-gray-100 dark:text-black flex text-xl justify-center items-center rounded-full bg-black text-white"
-          onClick={() => setDarkMode((prev) => !prev)}
-        >
-          {!darkMode ? <LuSun /> : <LuMoon />}
-        </button>
-        <h1 className="text-4xl dark:text-white font-bold mb-6 entry-0">
-          Hi ! I'm Krystian 🖐️️
-        </h1>
-        <h2 className="text-2xl dark:text-white font-semibold mb-6 entry-0">
-          A Software Engineer
-        </h2>
+        <HeaderSection
+          darkMode={darkMode}
+          toggleDarkMode={() => setDarkMode((prev) => !prev)}
+        />
 
         <AboutMe />
 
