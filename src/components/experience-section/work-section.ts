@@ -13,7 +13,8 @@ export const workSection: Section = {
       date: "Oct 2025 - Jan 2026",
       logoSrc: innovationLogo as string,
       logoAlt: "Innovation Software logo",
-      description: "Worked on the development of an ERP system using Symfony and Vue.js. Responsible for designing and implementing core application modules, including authentication and authorization, user roles and permissions, task management, and notification systems.Collaborated closely with the team to ensure secure access control, scalable architecture, and a smooth user experience.",
+      description:
+        "Worked on the development of an ERP system using Symfony and Vue.js. Responsible for designing and implementing core application modules, including authentication and authorization, user roles and permissions, task management, and notification systems.Collaborated closely with the team to ensure secure access control, scalable architecture, and a smooth user experience.",
     },
     {
       title: "Fullstack Developer",
@@ -37,8 +38,7 @@ export const workSection: Section = {
       logoSrc: logo as string,
       logoAlt: "Timenotes.io logo",
       description:
-        "Worked on the development of a time tracking application and a new landing page for TimeNotes. Responsible for building and maintaining user interfaces using React, collaborating on application features related to time tracking, and ensuring a responsive and user-friendly experience across the product."
+        "Worked on the development of a time tracking application and a new landing page for TimeNotes. Responsible for building and maintaining user interfaces using React, collaborating on application features related to time tracking, and ensuring a responsive and user-friendly experience across the product.",
     },
   ],
 };
-

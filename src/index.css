@@ -2,96 +2,95 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 #base {
-  @apply
-  w-[100vw] min-h-[100vh] px-6 lg:px-42 2xl:px-[28%]
-  pt-12;
+    @apply w-screen min-h-screen px-6 lg:px-42 2xl:px-[28%]
+    pt-12;
 }
 
 #blur {
-  pointer-events: none;
-  transform-origin: bottom;
-  /*animation: blur_intro 1s linear forwards;*/
+    pointer-events: none;
+    transform-origin: bottom;
+    /*animation: blur_intro 1s linear forwards;*/
 }
 
 .entry-0 {
-  animation: entry .5s ease-in-out backwards;
+    animation: entry 0.5s ease-in-out backwards;
 }
 
 .entry-1 {
-  animation: entry .5s ease-in-out backwards;
-  animation-delay: .15s;
+    animation: entry 0.5s ease-in-out backwards;
+    animation-delay: 0.15s;
 }
 
 .entry-2 {
-  animation: entry .5s ease-in-out backwards;
-  animation-delay: .3s;
+    animation: entry 0.5s ease-in-out backwards;
+    animation-delay: 0.3s;
 }
 
 .entry-3 {
-  animation: entry .5s ease-in-out backwards;
-  animation-delay: .45s;
+    animation: entry 0.5s ease-in-out backwards;
+    animation-delay: 0.45s;
 }
 
 .entry-4 {
-  animation: entry .5s ease-in-out backwards;
-  animation-delay: .6s;
+    animation: entry 0.5s ease-in-out backwards;
+    animation-delay: 0.6s;
 }
 
 .entry-skills-section {
-  animation: entry-2 .5s ease-in-out backwards;
-  animation-delay: 0.75s;
+    animation: entry-2 0.5s ease-in-out backwards;
+    animation-delay: 0.75s;
 }
 
 .entry-6 {
-  animation: entry-2 .5s ease-in-out backwards;
-  animation-delay: 0.9s;
+    animation: entry-2 0.5s ease-in-out backwards;
+    animation-delay: 0.9s;
 }
 
 .entry-7 {
-  animation: entry-2 .5s ease-in-out backwards;
-  animation-delay: 1.05s;
+    animation: entry-2 0.5s ease-in-out backwards;
+    animation-delay: 1.05s;
 }
 
 .entry-blur {
-  animation: blur_intro .5s ease-in-out backwards;
-  animation-delay: 1.25s;
+    animation: blur_intro 0.5s ease-in-out backwards;
+    animation-delay: 1.25s;
 }
 
 @keyframes blur_intro {
-  from {
-    opacity: 0;
-  }
+    from {
+        opacity: 0;
+    }
 
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes entry {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes entry-2 {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

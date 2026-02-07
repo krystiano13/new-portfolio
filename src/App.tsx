@@ -17,76 +17,77 @@ import { LuSun } from "react-icons/lu";
 import { LuMoon } from "react-icons/lu";
 
 function App() {
-    const [darkMode, setDarkMode] = useState(false);
-    const [firstRender, setFirstRender] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
+  const [firstRender, setFirstRender] = useState(true);
 
-    useEffect(() => {
-        setTimeout(() => {
-            window.scrollTo(0, 0);
-        }, 250)
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 250);
 
-        const darkModeStorage = localStorage.getItem("darkMode");
+    const darkModeStorage = localStorage.getItem("darkMode");
 
-        if (darkModeStorage === "true") {
-            setDarkMode(true);
-        } else {
-            setDarkMode(false);
-        }
-    }, []);
+    if (darkModeStorage === "true") {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, []);
 
-    useEffect(() => {
-        if(!firstRender) {
-            localStorage.setItem("darkMode", darkMode.toString());
-        } else {
-            setFirstRender(false);
-        }
-    }, [darkMode]);
+  useEffect(() => {
+    if (!firstRender) {
+      localStorage.setItem("darkMode", darkMode.toString());
+    } else {
+      setFirstRender(false);
+    }
+  }, [darkMode, firstRender]);
 
-    return (
-        <div id="base" className={`${ darkMode ? "dark" : "" } w-full h-full dark:bg-zinc-900`}>
-            <div className="fixed entry-blur w-full h-full flex items-end justify-center pointer-events-none">
-                <div
-                    className="bg-gradient-to-t dark:from-zinc-900 from-white h-48 to-transparent w-full"
-                ></div>
-            </div>
-            <div className="wrapper">
-                <button
-                    className="entry-1 w-12 h-12 mb-6 cursor-pointer dark:bg-gray-100 dark:text-black flex text-xl justify-center items-center rounded-full bg-black text-white"
-                    onClick={() => setDarkMode(prev => !prev)}
-                >
-                    {
-                        !darkMode ? <LuSun /> : <LuMoon />
-                    }
-                </button>
-                <h1 className="text-4xl dark:text-white font-bold mb-6 entry-0">Hi ! I'm Krystian 🖐️️</h1>
-                <h2 className="text-2xl dark:text-white font-semibold mb-6 entry-0">A Software Engineer</h2>
+  return (
+    <div
+      id="base"
+      className={`${darkMode ? "dark" : ""} w-full h-full dark:bg-zinc-900`}
+    >
+      <div className="fixed entry-blur w-full h-full flex items-end justify-center pointer-events-none">
+        <div className="bg-linear-to-t dark:from-zinc-900 from-white h-48 to-transparent w-full"></div>
+      </div>
+      <div className="wrapper">
+        <button
+          className="entry-1 w-12 h-12 mb-6 cursor-pointer dark:bg-gray-100 dark:text-black flex text-xl justify-center items-center rounded-full bg-black text-white"
+          onClick={() => setDarkMode((prev) => !prev)}
+        >
+          {!darkMode ? <LuSun /> : <LuMoon />}
+        </button>
+        <h1 className="text-4xl dark:text-white font-bold mb-6 entry-0">
+          Hi ! I'm Krystian 🖐️️
+        </h1>
+        <h2 className="text-2xl dark:text-white font-semibold mb-6 entry-0">
+          A Software Engineer
+        </h2>
 
-                <AboutMe />
+        <AboutMe />
 
-                <section className="entry-2">
-                    {
-                        [workSection, educationSection].map((item, index) => (
-                            <ExperienceSection entryKey={index + 2} section={item} />
-                        ))
-                    }
-                </section>
+        <section className="entry-2">
+          {[workSection, educationSection].map((item, index) => (
+            <ExperienceSection entryKey={index + 2} section={item} />
+          ))}
+        </section>
 
-                <section className="entry-skills-section mb-6">
-                    <SkillsSection />
-                </section>
+        <section className="entry-skills-section mb-6">
+          <SkillsSection />
+        </section>
 
-                <section className="entry-6 mb-6">
-                    <ProjectsSection projects={projects} />
-                </section>
+        <section className="entry-6 mb-6">
+          <ProjectsSection projects={projects} />
+        </section>
 
-                <section className="entry-7">
-                    <ContactSection />
-                </section>
+        <section className="entry-7">
+          <ContactSection />
+        </section>
 
-                <section className="h-48" id="empty"></section>
-            </div>
-        </div>
-    )
+        <section className="h-48" id="empty"></section>
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
