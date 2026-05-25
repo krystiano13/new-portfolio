@@ -1,4 +1,5 @@
 import logo from "../../assets/logo1.webp";
+import icLogo from "../../assets/ic.svg";
 import oktalLogo from "../../assets/oktal_labs_logo.jpeg";
 import innovationLogo from "../../assets/innovation.jpg";
 
@@ -7,6 +8,14 @@ import type { Section } from "./types/section.ts";
 export const workSection: Section = {
   title: "WORK EXPERIENCE",
   elements: [
+    {
+      title: "Software Developer",
+      subtitle: "Insta Catch",
+      date: "Feb 2026 - Now",
+      logoSrc: icLogo,
+      logoAlt: "Insta Catch logo",
+      description: "Worked on the development of the complete digital ecosystem for Insta Catch, including three dedicated mobile applications for breeders, agents, and employees, a web management platform, and a modern landing page. Contributed to frontend and system development focused on workforce management, farm operations, job scheduling, real-time order handling, QR-based attendance tracking, and communication between all user roles within the platform. Participated in designing responsive UI/UX solutions, optimizing user flows, and implementing scalable features across mobile and web environments."
+    },
     {
       title: "Software Developer",
       subtitle: "Innovation Software",
