@@ -5,7 +5,7 @@ interface Props {
   projects: Projects;
 }
 
-export function ProjectsSection({ projects }: Props) {
+export default function ProjectsSection({ projects }: Props) {
   return (
     <Fragment>
       <h3 className="text-xl dark:text-white font-medium mb-3">

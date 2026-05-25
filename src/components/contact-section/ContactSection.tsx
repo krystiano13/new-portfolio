@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-export function ContactSection() {
+export default function ContactSection() {
   return (
     <Fragment>
       <h3 className="text-xl dark:text-white font-medium mb-3">CONTACT INFO</h3>

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { skills } from "./skills.ts";
 
-export function SkillsSection() {
+export default function SkillsSection() {
   return (
     <Fragment>
       <h3 className={`text-xl dark:text-white font-medium mb-3`}>SKILLS</h3>

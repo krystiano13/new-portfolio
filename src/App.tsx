@@ -1,17 +1,27 @@
-import { useEffect, useState } from "react";
+import {lazy, useEffect, useState} from "react";
 
 // components
 import { HeaderSection } from "./components/header-section/HeaderSection.tsx";
 import { AboutMe } from "./components/about-me/AboutMe.tsx";
 import { ExperienceSection } from "./components/experience-section/ExperienceSection.tsx";
-import { SkillsSection } from "./components/skills-section/SkillsSection.tsx";
-import { ProjectsSection } from "./components/projects-section/ProjectsSection.tsx";
-import { ContactSection } from "./components/contact-section/ContactSection.tsx";
 
 // data
 import { workSection } from "./components/experience-section/work-section.ts";
 import { educationSection } from "./components/experience-section/education-section.ts";
 import { projects } from "./components/projects-section/projects.ts";
+
+// lazy components
+const SkillsSection = lazy(() => {
+  return import("./components/skills-section/SkillsSection.tsx");
+})
+
+const ProjectsSection = lazy(() => {
+  return import("./components/projects-section/ProjectsSection.tsx");
+})
+
+const ContactSection = lazy(() => {
+  return import("./components/contact-section/ContactSection.tsx");
+});
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
