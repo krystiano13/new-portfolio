@@ -19,4 +19,9 @@ export const skills: Skills = [
   { name: "Linux", iconName: "linux" },
   { name: "Astro", iconName: "astro" },
   { name: "Node.js", iconName: "nodejs" },
+  { name: "Kotlin", iconName: "kotlin" },
+  { name: "Android", iconName: "android" },
+  { name: "Arduino", iconName: "arduino" },
+  { name: "Fedora", iconName: "fedora" },
+  { name: "Bun.js", iconName: "bun" }
 ];
